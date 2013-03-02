@@ -1,0 +1,363 @@
+/*
+
+For use with CSS3 Foundations: Styling the Modern Web
+CSS3 Foundations Book: www.wiley.com/go/treehouse/css3foundations
+
+Project Files: 09-02
+
+ */
+
+@import url("reset.css");
+
+body {
+    background-color: #f5f5f5;
+    background-image: url("../images/bg-body.jpg");
+    font-size: 62.5%;
+    margin: 2.5em auto 0 auto;
+    max-width: 960px;
+}
+
+.group:before, .group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+#header, #main, #footer {
+    font-size: 1.6em; /* inherited value (10px) x 1.6em = 16px */
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+h1 {
+    position: relative;
+    top: 30px;
+}
+
+#main {
+   background-color: white;
+   background-color: rgba(255, 255, 255, 0.6);
+   border: #ccc solid 1px;
+   box-shadow: 0 3px 8px 0 #ccc;
+   padding: 2.5em;
+}
+
+.product {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+.button {
+    background-color: hotpink;
+    color: white;
+    border-radius: 8px;
+    border: 2px solid white;
+    padding: 1em;
+}
+
+blockquote {
+    position: relative;
+}
+
+blockquote p {
+    font-style: italic;
+}
+
+blockquote p:before {
+    content: "\201C";
+    position: absolute;
+    left: -20px;
+    top: -10px;
+}
+
+blockquote p:after {
+    content: "\201D";
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+}
+
+blockquote cite:before {
+    content: "- ";
+}
+
+aside > h3 {
+    font-weight: bold;
+    margin: 0 0 1.6em 0;
+}
+
+p + .offer {
+    color: red;
+}
+
+input[type="text"], input[type="email"] {
+    border: none;
+    box-shadow: -3px 3px 2px 0 #ccc inset;
+    padding: .4em 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"][class="button"] {
+    font-size: 1em;
+    cursor: pointer;
+    margin: 2em auto 1em;
+    padding: .8em;
+    display: block;
+}
+
+input[type="submit"][class="button"]:hover {
+    background-color: #d4326d;
+}
+
+a:link {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:active {
+    color: red;
+}
+
+a:focus {
+    outline: black dotted 1px;
+}
+
+#content p:first-of-type:first-letter {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+#newsletter {
+    color: white;
+    border-radius: 8px;
+    border: rgba(0,0,0,0.1) solid 5px;
+    background: url("../images/icon-newsletter.png") no-repeat 91% 2%, url("../images/bg-newsletter.png") repeat 0 #00ACDF;
+    padding: 6%;
+    width: 88%;
+    margin-left: -4px;
+}
+
+#footer {
+    background: #ccc url("../images/bg-footer.jpg");
+    border-top: #999 dotted 4px;
+    -webkit-border-image: url("../images/bdr-footer.png") 4 repeat;
+    margin-top: 2.5em;
+    padding: 1.4em 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.showcase .button {
+    background-image: -webkit-linear-gradient(top, #FB3876 0%, #d4326d 100%);
+    background-image: -moz-linear-gradient(to bottom, #FB3876 0%, #d4326d 100%);    
+    background-image: -o-linear-gradient(to bottom, #FB3876 0%, #d4326d 100%);
+    background-image: linear-gradient(to bottom, #FB3876 0%, #d4326d 100%);
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+.showcase .button:hover  {
+    background-color: #00ACDF;
+}
+
+#content {
+    width: 65%;
+    margin: 0 auto;
+    float: left;
+}
+
+#header nav > ul {
+    border-radius: 20px;
+    border: #ccc solid 1px;
+}
+
+.showcase {
+    box-shadow: 0 -3px 8px 0 #ccc;
+    background: #f5f5f5;
+    position: relative;
+}
+
+.small-logo a {
+    background: white url("../images/logo-small.png") no-repeat center;
+    display: block;
+    min-height: 11px;
+    width: 162px;
+    padding: 5px;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+#header nav > ul > li {
+    background: white;
+    display: inline-block;
+}
+
+#header nav > ul > li:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#header nav > ul > li:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#header nav ul > li:hover {
+    background: #f5f5f5;
+}
+#header nav ul ul > li:hover {
+    background: white;
+}
+
+#header nav ul li a {
+    color: black;
+    display: block;
+    padding: 10px 20px;
+}
+
+#header nav ul ul {
+    /*style all lists below the top-level list*/
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: none;
+    padding: 20px 0;
+    position: absolute;
+    min-width: 140px;
+    z-index: 10;
+    visibility: hidden;
+}
+
+#header nav ul ul li {
+    position: relative;
+}
+
+#header nav ul ul ul {
+    /*style all lists below the second-level list*/
+    border: 1px solid #ccc;
+    border-right: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0;
+    left: -100%;
+    top: -1px;
+}
+
+#header nav li:hover > ul{
+    /*show the menu of the list item being hovered over*/
+    visibility: visible;
+}
+
+#header {
+    margin: 0 0 2em 0;
+}
+
+#header .logo {
+    margin: 2.4em 0;
+    float: left;
+    width: 240px;
+}
+
+#header nav {
+    margin-top: 2em;
+    float: right;
+}
+
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+aside {
+    margin: 0 0 2em 0;
+}
+
+#content h1, #content h2, #content h3, #content h4 {
+    margin: 0 0 1.6em 0;
+}
+
+#content p, #content ul {
+    margin: 0 0 1.25em 0;
+}
+
+blockquote cite {
+    margin: 0.625em 0 0 0;
+    float: right;
+}
+
+#newsletter h3 {
+    margin: 0 0 1em 0;
+}
+
+#newsletter label {
+    margin: 1.5em 0 0 0;
+}
+
+label {
+    display: block;
+}
+
+.aside {
+    margin: 0 0 2em 0;
+}
+
+.post h3 {
+    margin: 0 0 1em 0;
+}
+ 
+.post h3 img {
+    margin: 0 .5em 0 0;
+}
+
+.testimonals {
+    padding: 1em 0 0 0;
+}
+
+.benefits {
+    clear: left;
+}
+
+.sidebar {
+    float: right;
+    width: 25%;
+}
+
+#footer li:nth-child(1) {
+    float: left;
+}
+
+#footer li:nth-child(2) {
+    float: right;
+}
+
+.banner-ad {
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    z-index: 9;
+}

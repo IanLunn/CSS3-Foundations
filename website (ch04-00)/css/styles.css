@@ -1,0 +1,83 @@
+/*
+
+For use with CSS3 Foundations: Styling the Modern Web
+CSS3 Foundations Book: www.wiley.com/go/treehouse/css3foundations
+
+Project Files: 04-00
+
+ */
+
+@import url("reset.css");
+
+body {
+    background-color: gray;
+    background-image: url("../images/bg-body.jpg");
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+#main {
+    background-color: white;
+}
+
+.button {
+    background-color: hotpink;
+    color: white;
+}
+
+blockquote p {
+    font-style: italic;
+}
+
+blockquote p:before {
+    content: "\201C";
+}
+
+blockquote p:after {
+    content: "\201D";
+}
+
+aside > h3 {
+    font-weight: bold;
+}
+
+p + .offer {
+    color: red;
+}
+
+input[type="text"], input[type="email"] {
+    border: none;
+}
+
+input[type="submit"][class="button"] {
+    font-size: 1em;
+}
+
+a:link {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:active {
+    color: red;
+}
+
+a:focus {
+    outline-color: black;
+    outline-style: dotted;
+    outline-width: 1px;
+}
+
+#content p:first-of-type:first-letter {
+    font-size: 4em;
+    font-weight: bold;
+}
